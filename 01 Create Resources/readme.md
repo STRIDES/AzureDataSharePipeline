@@ -28,3 +28,6 @@ paramfile.json | Parameter file containing all details passed to PoSH scripts
 5.  Run 02 - GrantStorageRights.ps1 script by running the following command in the PowerShell client of choice
 
 	`& "C:\localfolder\02 - GrantStorageRights.ps1" -filepath "C:\localfolder\paramfile.json`
+	
+* [02 Sample Data](https://github.com/hfoley/PrecisionLearning/tree/main/02%20Sample%20Data)   - contains the raw VitalSource extract data I mimicked from documentation (link above)
+
