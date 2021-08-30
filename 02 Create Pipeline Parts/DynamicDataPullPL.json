@@ -1,0 +1,113 @@
+{
+    "name":  "Dynamic Customer Data Pull",
+    "properties":  {
+                       "activities":  [
+                                          {
+                                              "name":  "Dynamic Customer Pull",
+                                              "type":  "Copy",
+                                              "dependsOn":  [
+
+                                                            ],
+                                              "policy":  {
+                                                             "timeout":  "7.00:00:00",
+                                                             "retry":  0,
+                                                             "retryIntervalInSeconds":  30,
+                                                             "secureOutput":  false,
+                                                             "secureInput":  false
+                                                         },
+                                              "userProperties":  [
+
+                                                                 ],
+                                              "typeProperties":  {
+                                                                     "source":  {
+                                                                                    "type":  "DelimitedTextSource",
+                                                                                    "storeSettings":  {
+                                                                                                          "type":  "AzureBlobStorageReadSettings",
+                                                                                                          "recursive":  true,
+                                                                                                          "wildcardFileName":  {
+                                                                                                                                   "value":  "@concat(pipeline().parameters.fileprefix, \u0027*.csv\u0027)",
+                                                                                                                                   "type":  "Expression"
+                                                                                                                               },
+                                                                                                          "enablePartitionDiscovery":  false
+                                                                                                      },
+                                                                                    "formatSettings":  {
+                                                                                                           "type":  "DelimitedTextReadSettings"
+                                                                                                       }
+                                                                                },
+                                                                     "sink":  {
+                                                                                  "type":  "ParquetSink",
+                                                                                  "storeSettings":  {
+                                                                                                        "type":  "AzureBlobFSWriteSettings"
+                                                                                                    },
+                                                                                  "formatSettings":  {
+                                                                                                         "type":  "ParquetWriteSettings"
+                                                                                                     }
+                                                                              },
+                                                                     "enableStaging":  false,
+                                                                     "translator":  {
+                                                                                        "type":  "TabularTranslator",
+                                                                                        "typeConversion":  true,
+                                                                                        "typeConversionSettings":  {
+                                                                                                                       "allowDataTruncation":  true,
+                                                                                                                       "treatBooleanAsNumber":  false
+                                                                                                                   }
+                                                                                    }
+                                                                 },
+                                              "inputs":  [
+                                                             {
+                                                                 "referenceName":  "DynamicCustStorageSrc",
+                                                                 "type":  "DatasetReference",
+                                                                 "parameters":  {
+                                                                                    "srccontainer":  {
+                                                                                                         "value":  "@pipeline().parameters.container",
+                                                                                                         "type":  "Expression"
+                                                                                                     },
+                                                                                    "secretname":  {
+                                                                                                       "value":  "@pipeline().parameters.ParamSecret",
+                                                                                                       "type":  "Expression"
+                                                                                                   },
+                                                                                    "directorypath":  {
+                                                                                                          "value":  "@pipeline().parameters.directorypath",
+                                                                                                          "type":  "Expression"
+                                                                                                      }
+                                                                                }
+                                                             }
+                                                         ],
+                                              "outputs":  [
+                                                              {
+                                                                  "referenceName":  "NIHCustSinkDynamic",
+                                                                  "type":  "DatasetReference",
+                                                                  "parameters":  {
+                                                                                     "filedsparam":  {
+                                                                                                         "value":  "@pipeline().parameters.container",
+                                                                                                         "type":  "Expression"
+                                                                                                     }
+                                                                                 }
+                                                              }
+                                                          ]
+                                          }
+                                      ],
+                       "parameters":  {
+                                          "ParamSecret":  {
+                                                              "type":  "string",
+                                                              "defaultValue":  "Secret Name in AKV"
+                                                          },
+                                          "container":  {
+                                                            "type":  "string",
+                                                            "defaultValue":  "raw"
+                                                        },
+                                          "fileprefix":  {
+                                                             "type":  "string",
+                                                             "defaultValue":  "Beginning of filename"
+                                                         },
+                                          "directorypath":  {
+                                                                "type":  "string"
+                                                            }
+                                      },
+                       "annotations":  [
+
+                                       ],
+                       "lastPublishTime":  "2021-07-07T02:16:42Z"
+                   },
+    "type":  "Microsoft.Synapse/workspaces/pipelines"
+}

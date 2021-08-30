@@ -1,0 +1,32 @@
+{
+    "name":  "nihCustomerLS",
+    "type":  "Microsoft.Synapse/workspaces/linkedservices",
+    "properties":  {
+                       "type":  "AzureBlobStorage",
+                       "connectVia":  {
+                                          "referenceName":  "AutoResolveIntegrationRuntime",
+                                          "type":  "IntegrationRuntimeReference"
+                                      },
+                       "parameters":  {
+                                          "secretname":  {
+                                                             "type":  "string"
+                                                         }
+                                      },
+                       "annotations":  [
+
+                                       ],
+                       "typeProperties":  {
+                                              "connectionString":  {
+                                                                       "type":  "AzureKeyVaultSecret",
+                                                                       "store":  {
+                                                                                     "referenceName":  "nihakvLS",
+                                                                                     "type":  "LinkedServiceReference"
+                                                                                 },
+                                                                       "secretName":  {
+                                                                                          "value":  "@linkedService().secretname",
+                                                                                          "type":  "Expression"
+                                                                                      }
+                                                                   }
+                                          }
+                   }
+}
