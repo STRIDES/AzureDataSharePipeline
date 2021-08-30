@@ -22,4 +22,7 @@ Step 1 - Download the files and save to a local folder.
 
 3. Open and update all the values needed within the paramfile.json.  Anything that contains <> requires your input.  Replace all the values including the <> within the " ".  
 	![alt text](https://github.com/hfoley/EDU/blob/master/images/EditingParamFile.jpg?raw=true)
-4.  
+4.  Run the PowerShell script 01 - Create Resources DataShare.ps1 by running the following command in the PowerShell client of choice
+
+	Markup :  `code()`
+
