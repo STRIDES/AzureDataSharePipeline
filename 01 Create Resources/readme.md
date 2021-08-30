@@ -56,7 +56,8 @@ PipelineName1 | Pipeline name to extract data
 5.  Run 02 - GrantStorageRights.ps1 script by running the following command in the PowerShell client of choice
 
 	`& "C:\localfolder\02 - GrantStorageRights.ps1" -filepath "C:\localfolder\paramfile.json`
-	
+
+6.  Validate all the resources were successfully created in your Azure environment.  
 
 Continue on to [02 Create Pipeline Parts](https://github.com/hfoley/DataSharePipeline/tree/main/02%20Create%20Pipeline%20Parts) to build the pipeline and related parts within the Synapse workspace 
 
