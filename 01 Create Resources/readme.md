@@ -3,13 +3,15 @@
 The files in this location are to help build the resources we'll use in your Azure subscription.  The script will create the resources below.  It will check for the existence of the items first so you can specify existing resources in the paramfile.json.  
 
 ## File Inventory
-
+You need to download and save the files listed here to your local machine.  
 Filename  | Details
 ------------- | -------------
 00 - PreReqCheck.ps1  | PoSH script to help with pre-reqs
 01 - Create Resources DataShare.ps1  | Posh script to create items specified in Azure
 02 - GrantStorageRights.ps1 | Posh script to grant rights required 
 paramfile.json | Parameter file containing all details passed to PoSH scripts 
+
+You will need to update the paramfile.json file before you run the PowerShell scripts above.  It is used to drive all the PowerShell scripts and is the only file that needs input/editing.  
 
 ## Paramfile Variable Details
 paramfile value | Details
@@ -25,7 +27,17 @@ ManagedVirtualNetwork | name for managed vnet
 firewallrulename | name for a firewall rule to allow your local IP to connect 
 azstoragename2 | ADLS data lake storage account to land processed parquet files 
 containername1 | raw landing container name if using sample 
-
+containername2 | container to land processed parquet files 
+adminuser | AAD account that can create resources in Azure 
+akvname | Name of Azure Key Vault to create or use 
+akvsecret1 | Name of secret to create in AKV containing the connection string to source storage account 
+akvsecret2 | Name of 2nd secret to create in AKV containing the connection string to source storage account 
+LinkedServiceName1 | 
+LinkedServiceName2
+LinkedServiceName3
+DatasetName1
+DatasetName2
+PipelineName1
 
 ## Steps to create resources in Azure  
 
