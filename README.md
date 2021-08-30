@@ -4,6 +4,20 @@ This solution is to help build out a process to collect data wherever as long as
 	
 
 ## What We'll Do - High Level Overview of Steps  
+
+1. Download the files you'll need locally into one folder and note the folder location.  This code assumes all files are in one folder location without subfolders.   
+2. Update the paramfile.json with the values and naming you want.  Update the values in the parentheses where there are < xxx > to the values you want.  Example below 
+	"resourceGroupName": "RGNameIWant",
+3. Save the updates to the paramfile.json.  
+4. Run the PowerShell scripts you need.  If you need to build out the items in Azure, you'll run: 
+	& "C:\localfolder\01 - BaseInstall.ps1" -filepath "C:\localfolder\paramfile.json"!
+    5. Save CSV files in appropriate source locations you want to use to pull data from.  
+6. Run the pipeline with appropriate parameter values.  
+7. Validate that parquet files landed in data lake destination 
+
+2. Open the 00 - PreReqCheck.ps1 file in your preferred client to run PowerShell.  Visual Studio Code can be used for example (https://code.visualstudio.com/) or the PowerShell ISE.  You can step through and run selections of the code to check and validate PowerShell version and required modules are installed.
+  
+![alt text](https://github.com/hfoley/EDU/blob/master/images/VSCodeRunSelection.jpg?raw=true)
 	1. Download the files you'll need locally into one folder and note the folder location.  This code assumes all files are in one folder location without subfolders.   
 	2. Update the paramfile.json with the values and naming you want.  Update the values in the parentheses where there are < xxx > to the values you want.  Example below 
 		"resourceGroupName": "RGNameIWant",
