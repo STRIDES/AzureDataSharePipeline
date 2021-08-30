@@ -14,14 +14,9 @@ This solution is to help build out a process to collect data wherever as long as
 
 ## Asset List - These items will be created in your Azure subscription 
 
-Azure Item  | Details
-------------- | -------------
-Azure Resource Group  | All the components are built within 1 resource group 
-Azure Synapse Analytics workspace | Synapse workspace to build the pipeline pieces
-Azure Data Lake Gen 2 | ADLS Gen 2 that is specified for system use with Synapse 
-Azure Data Lake Gen 2 | ADLS Gen 2 that we will use for data lake to land refined parquet files
+The PowerShell scripts will create all the items below and is driven by values with the paramfile.  You will only need to edit the paramfile.json file.  
 
-Azure Item | Paramfile value | Details
+Azure Item | paramfile value | Details
 | :--- | ---: | :---:
 Azure Resource Group   | resourceGroupName | All the components are built within 1 resource group 
 Azure Synapse Analytics workspace  | azsynapsename | Synapse Analytics workspace name
