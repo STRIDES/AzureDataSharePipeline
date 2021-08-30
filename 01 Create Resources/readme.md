@@ -32,12 +32,12 @@ adminuser | AAD account that can create resources in Azure
 akvname | Name of Azure Key Vault to create or use 
 akvsecret1 | Name of secret to create in AKV containing the connection string to source storage account 
 akvsecret2 | Name of 2nd secret to create in AKV containing the connection string to source storage account 
-LinkedServiceName1 | 
-LinkedServiceName2
-LinkedServiceName3
-DatasetName1
-DatasetName2
-PipelineName1
+LinkedServiceName1 | Linked Service name pointing to azstoragename2 above
+LinkedServiceName2 | Linked Service name pointing to akvname above
+LinkedServiceName3 | Linked Service name pointing to storage account containing csv source
+DatasetName1 | Dataset name for dynamic storage source
+DatasetName2 | Dataset name for ADLS to compile data in parquet files in azstoragename2
+PipelineName1 | Pipeline name to extract data
 
 ## Steps to create resources in Azure  
 
