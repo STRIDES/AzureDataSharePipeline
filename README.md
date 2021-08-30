@@ -23,8 +23,8 @@ Azure Data Lake Gen 2 | ADLS Gen 2 that we will use for data lake to land refine
 
 Azure Item | Paramfile value | Details
 | :--- | ---: | :---:
-Content Cell  | Content Cell | Content Cell
-Content Cell  | Content Cell | Content Cell
+Azure Resource Group   | resourceGroupName | All the components are built within 1 resource group 
+Azure Synapse Analytics workspace  | azsynapsename | Synapse Analytics workspace name
 
 
 The architecture of the solution diagrammed below.  
