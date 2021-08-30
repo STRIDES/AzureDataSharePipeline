@@ -2,9 +2,6 @@
 
 This solution is to help build out a process to collect data wherever as long as it's contained in Azure storage account.  These PowerShell scripts will build out all the the components of this architecture using Synapse Analytics.  It will also build out the parameter driven pipelines to automate the sharing of the data (example with CSVs) across environments (internal & external).  GIANT SECURITY DISCLAIMER: Due to what this does, it's not the most secure way to setup an environment!!  You need to verify that you're going to be allowed to do this in your Azure environment.  You will need the connection string for the storage account to pull data from so there will need to clearance and blessings on both sides of this solution.  You may need to setup separate subscriptions/storage accounts that aren't under restrictions or policies such as HIPPA/etc.  PROCEED WITH CAUTION AND MAKE SURE YOU'VE GOTTEN APPROVAL FROM YOUR AZURE ADMINS!  
 	
-The architecture of the solution diagrammed below.  
-
-![alt text](https://github.com/hfoley/EDU/blob/master/images/Hope%20Data%20Share%20Architecture.jpg?raw=true)
 
 ## What We'll Do - high level overview of steps  
 	1. Download the files you'll need locally into one folder and note the folder location.  This code assumes all files are in one folder location without subfolders.   
@@ -16,6 +13,10 @@ The architecture of the solution diagrammed below.
         5. Save CSV files in appropriate source locations you want to use to pull data from.  
 	6. Run the pipeline with appropriate parameter values.  
 	7. Validate that parquet files landed in data lake destination 
+
+The architecture of the solution diagrammed below.  
+
+![alt text](https://github.com/hfoley/EDU/blob/master/images/Hope%20Data%20Share%20Architecture.jpg?raw=true)
 
 ## Asset List - These items will be created in your Azure subscription 
 	1. Azure Resource Group
