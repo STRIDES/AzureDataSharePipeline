@@ -35,5 +35,7 @@ Step 1 - Download the files and save to a local folder if you haven't already.
 
 5.  Verify all the components created within Synapse workspace. 
 
-	
+Continue on to [03 Sample Data](https://github.com/hfoley/DataSharePipeline/tree/main/03%20Sample%20Data) to find details on running the pipeline and a sample dataset to test.  
+
+
 
