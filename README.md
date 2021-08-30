@@ -44,10 +44,9 @@ Navigate to each section to view the scripts needed and for further details.
 There is a script you can use to help check for these pre-reqs and install them in 01 Create Resources folder called 00 - PreReqCheck.ps1. 
 
 1. Open that file in your preferred PowerShell IDE (administrator mode is required to install anything). 
-2. Step through the commands in the script to check for necessary pre-reqs below: 
-	Need to have at least PowerShell 5.1 installed.  You can check this by running the following script. 
+2. PowerShell 5.1 or above needs installed locally.  You can check this by running the following script. 
 		$PSVersionTable.PSVersion
-2. Install Powershell modules needed - the latest versions I tested are listed
+2. Powershell modules needed - the latest versions I tested are listed.  00 - PreReqCheck.ps1 has syntax to install them. 
 	1. Az.Resources (2.2.0) - https://docs.microsoft.com/en-us/powershell/module/az.resources
 	2. Az.Storage (3.10.0) - https://docs.microsoft.com/en-us/powershell/module/az.storage
 	3. Az.Synapse (0.13.0) - https://docs.microsoft.com/en-us/powershell/module/az.synapse
