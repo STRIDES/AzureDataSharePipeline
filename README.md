@@ -6,6 +6,17 @@ The architecture of the solution diagrammed below.
 
 ![alt text](https://github.com/hfoley/EDU/blob/master/images/Hope%20Data%20Share%20Architecture.jpg?raw=true)
 
+## What We'll Do - high level overview of steps  
+	1. Download the files you'll need locally into one folder and note the folder location.  This code assumes all files are in one folder location without subfolders.   
+	2. Update the paramfile.json with the values and naming you want.  Update the values in the parentheses where there are < xxx > to the values you want.  Example below 
+		"resourceGroupName": "RGNameIWant",
+	3. Save the updates to the paramfile.json.  
+	4. Run the PowerShell scripts you need.  If you need to build out the items in Azure, you'll run: 
+		& "C:\localfolder\01 - BaseInstall.ps1" -filepath "C:\localfolder\paramfile.json"!
+        5. Save CSV files in appropriate source locations you want to use to pull data from.  
+	6. Run the pipeline with appropriate parameter values.  
+	7. Validate that parquet files landed in data lake destination 
+
 ## Asset List - These items will be created in your Azure subscription 
 	1. Azure Resource Group
 	2. Azure Synapse Analytics workspace - all components will exist in the workspace
