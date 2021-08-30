@@ -15,9 +15,12 @@ paramfile.json | Parameter file containing all details passed to PoSH scripts
 Step 1 - Download the files and save to a local folder. 
 
 1. Download all the files contained in this folder and save to a local folder location.  
-2. Open the 00 - PreReqCheck.ps1 file in your preferred client to run PowerShell.  Visual Studio Code can be used for example (https://code.visualstudio.com/) or just within the PowerShell cmd window or ISE.  You can run selections within it to check and validate PowerShell version and required modules are installed.  
+
+2. Open the 00 - PreReqCheck.ps1 file in your preferred client to run PowerShell.  Visual Studio Code can be used for example (https://code.visualstudio.com/) or the PowerShell ISE.  You can step through and run selections of the code to check and validate PowerShell version and required modules are installed.
+  
 	<insert pic> 
 
+3. skrerel
 	 1. A numbered list
               1. A nested numbered list
               2. Which is numbered
