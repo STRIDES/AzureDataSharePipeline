@@ -11,6 +11,11 @@ Filename  | Details
 02 - GrantStorageRights.ps1 | Posh script to grant rights required 
 paramfile.json | Parameter file containing all details passed to PoSH scripts 
 
+## Paramfile Variable Details
+paramfile value | Details
+| :--- | ---: 
+
+
 ## Steps to create resources in Azure  
 
 1. Download all the files contained in this folder and save to a local folder location.  
