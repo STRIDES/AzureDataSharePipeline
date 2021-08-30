@@ -47,11 +47,11 @@ There is a script you can use to help check for these pre-reqs and install them 
 2. Step through the commands in the script to check for necessary pre-reqs below: 
 	Need to have at least PowerShell 5.1 installed.  You can check this by running the following script. 
 		$PSVersionTable.PSVersion
-2. Install Powershell modules needed
-	1. Az.Resources - https://docs.microsoft.com/en-us/powershell/module/az.resources
-	2. Az.Storage - https://docs.microsoft.com/en-us/powershell/module/az.storage
-	3. Az.Synapse - https://docs.microsoft.com/en-us/powershell/module/az.synapse
-	4. Az.KeyVault - https://docs.microsoft.com/en-us/powershell/module/az.keyvault
+2. Install Powershell modules needed - the latest versions I tested are listed
+	1. Az.Resources (2.2.0) - https://docs.microsoft.com/en-us/powershell/module/az.resources
+	2. Az.Storage (3.10.0) - https://docs.microsoft.com/en-us/powershell/module/az.storage
+	3. Az.Synapse (0.13.0) - https://docs.microsoft.com/en-us/powershell/module/az.synapse
+	4. Az.KeyVault (1.0.0) - https://docs.microsoft.com/en-us/powershell/module/az.keyvault
 
 	
 
