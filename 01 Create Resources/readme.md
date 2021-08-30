@@ -18,7 +18,7 @@ Step 1 - Download the files and save to a local folder.
 
 2. Open the 00 - PreReqCheck.ps1 file in your preferred client to run PowerShell.  Visual Studio Code can be used for example (https://code.visualstudio.com/) or the PowerShell ISE.  You can step through and run selections of the code to check and validate PowerShell version and required modules are installed.
   
-![alt text](https://github.com/hfoley/EDU/blob/master/images/Hope%20Precision%20Learning2.jpg?raw=true)
+![alt text](https://github.com/hfoley/EDU/blob/master/images/VSCodeRunSelection.jpg?raw=true)
 
 3. Open and update all the values needed within the paramfile.json.  Anything that contains <> requires your input.  Replace all the values including the <> within the " ".  
 	
