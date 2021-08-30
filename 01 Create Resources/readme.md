@@ -8,6 +8,7 @@ Filename  | Details
 ------------- | -------------
 00 - PreReqCheck.ps1  | PoSH script to help with pre-reqs
 01 - Create Resources DataShare.ps1  | Posh script to create items specified in Azure
+02 - GrantStorageRights.ps1 | Posh script to grant rights required 
 paramfile.json | Parameter file containing all details passed to PoSH scripts 
 
 ## Steps to create resources in Azure  
@@ -26,3 +27,6 @@ Step 1 - Download the files and save to a local folder.
 
 	`& "C:\localfolder\01 - Create Resources DataShare.ps1" -filepath "C:\localfolder\paramfile.json`
 
+5.  Run 02 - GrantStorageRights.ps1 script by running the following command in the PowerShell client of choice
+
+	`& "C:\localfolder\02 - GrantStorageRights.ps1" -filepath "C:\localfolder\paramfile.json`
