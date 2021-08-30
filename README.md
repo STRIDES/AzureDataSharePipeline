@@ -34,15 +34,6 @@ The architecture of the solution diagrammed below.
 
 ![alt text](https://github.com/hfoley/EDU/blob/master/images/Hope%20Data%20Share%20Architecture.jpg?raw=true)
 
-## Asset List - These items will be created in your Azure subscription 
-	1. Azure Resource Group
-	2. Azure Synapse Analytics workspace - all components will exist in the workspace
-	3. Azure Data Lake Gen 2 - will create one that's required for Synapse workspace but will leave alone 
-	4. Azure Data Lake Gen 2 - will create one that we will use as our data lake and will use for our raw and processed data zones 
-        5. Azure Key Vault - will create one that will be used to store connection string info in secret
-	6. Synapse linked services - creates 3 linked services to use in the pipeline 
-	7. Synapse dataset2 - will create 2 datasets
-	8. Synapse pipeline - will create a pipeline to pull data dynamically from storage account and land in ADLS gen 2 in parquet format(#4 listed above)
 	
 Navigate to each section to view the scripts needed and for further details.  
 * [01 Create Resources](https://github.com/hfoley/DataSharePipeline/tree/main/01%20Create%20Resources)   - contains PowerShell scripts to build all the Azure components in the solution and grant necessary permissions. Skip this if you want to use existing resources.  
