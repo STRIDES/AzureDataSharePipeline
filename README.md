@@ -12,6 +12,15 @@ This solution is to help build out a process to collect data wherever as long as
 4. Save CSV files in appropriate source locations you want to use to pull data from.  
 5. Run the pipeline with appropriate parameter values.  
 
+## Asset List - These items will be created in your Azure subscription 
+
+Azure Item  | Details
+------------- | -------------
+Azure Resource Group  | All the components are built within 1 resource group 
+Azure Synapse Analytics workspace | Synapse workspace to build the pipeline pieces
+Azure Data Lake Gen 2 | ADLS Gen 2 that is specified for system use with Synapse 
+Azure Data Lake Gen 2 | ADLS Gen 2 that we will use for data lake to land refined parquet files
+
 The architecture of the solution diagrammed below.  
 
 ![alt text](https://github.com/hfoley/EDU/blob/master/images/Hope%20Data%20Share%20Architecture.jpg?raw=true)
