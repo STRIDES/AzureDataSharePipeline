@@ -30,5 +30,5 @@ paramfile.json | Parameter file containing all details passed to PoSH scripts
 	`& "C:\localfolder\02 - GrantStorageRights.ps1" -filepath "C:\localfolder\paramfile.json`
 	
 
-Continue on to this location to build the pipeline and related parts within the Synapse workspace at [02 Sample Data](https://github.com/hfoley/DataSharePipeline/tree/main/02%20Create%20Pipeline%20Parts)   - contains the raw VitalSource extract data I mimicked from documentation (link above)
+Continue on to [02 Sample Data](https://github.com/hfoley/DataSharePipeline/tree/main/02%20Create%20Pipeline%20Parts) to build the pipeline and related parts within the Synapse workspace 
 
