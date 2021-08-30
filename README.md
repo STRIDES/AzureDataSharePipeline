@@ -41,11 +41,18 @@ Navigate to each section to view the scripts needed and for further details.
 * [03 Sample Data](https://github.com/hfoley/DataSharePipeline/tree/main/03%20Sample%20Data) - contains a few example raw csv files extracted that detail hospitalization metrics from the site https://healthdata.gov/dataset/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/4cnb-m4rz   
 
 ## Pre-reqs
-There is a script you can use to help check for these pre-reqs and install them in 01 Create Resources folder called 00 - PreReqCheck.ps1. Open that file in your preferred PowerShell IDE (administrator mode is required to install anything).   
-1. Need to have at least PowerShell 5.1 installed.  You can check this by running the following script. 
-	$PSVersionTable.PSVersion
-2. Install Powershell AZ package.  This solution has been tested with 4.3.0.  You can find info on installing this at https://www.powershellgallery.com/packages/Az/
-3. You may also need addtional modules if you have installed Az package some time ago.  Az.Synapse (https://www.powershellgallery.com/packages/Az.DataFactory) and Az.Synapse (https://www.powershellgallery.com/packages/Az.Synapse).  This was tested with Az.Synapse version 0.13.0
+There is a script you can use to help check for these pre-reqs and install them in 01 Create Resources folder called 00 - PreReqCheck.ps1. 
+
+1. Open that file in your preferred PowerShell IDE (administrator mode is required to install anything). 
+2. Step through the commands in the script to check for necessary pre-reqs below: 
+	Need to have at least PowerShell 5.1 installed.  You can check this by running the following script. 
+		$PSVersionTable.PSVersion
+2. Install Powershell modules needed
+	1. Az.Resources - https://docs.microsoft.com/en-us/powershell/module/az.resources
+	2. Az.Storage - https://docs.microsoft.com/en-us/powershell/module/az.storage
+	3. Az.Synapse - https://docs.microsoft.com/en-us/powershell/module/az.synapse
+	4. Az.KeyVault - https://docs.microsoft.com/en-us/powershell/module/az.keyvault
+
 	
 
 
