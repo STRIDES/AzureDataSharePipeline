@@ -14,7 +14,7 @@ paramfile.json | Parameter file containing all details passed to PoSH scripts
 
 Step 1 - Download the files and save to a local folder. 
 
-1. stuff chtecking
+1. Download all the files contained in this folder and save to a local folder location.  
 
 	 1. A numbered list
               1. A nested numbered list
