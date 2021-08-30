@@ -15,7 +15,7 @@ You will need to update the paramfile.json file before you run the PowerShell sc
 
 ## Paramfile Variable Details
 paramfile value | Details
-| :--- | ---: 
+| :--- | :--- 
 SubscriptionId | Azure Subscription ID to create resources
 tenantid | Azure tenant id 
 resourceGroupName | Name of resource group 
