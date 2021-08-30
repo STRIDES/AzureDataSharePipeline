@@ -24,5 +24,5 @@ Step 1 - Download the files and save to a local folder.
 	![alt text](https://github.com/hfoley/EDU/blob/master/images/EditingParamFile.jpg?raw=true)
 4.  Run the PowerShell script 01 - Create Resources DataShare.ps1 by running the following command in the PowerShell client of choice
 
-	Markup :  `code()`
+	`code()`
 
