@@ -14,6 +14,17 @@ paramfile.json | Parameter file containing all details passed to PoSH scripts
 ## Paramfile Variable Details
 paramfile value | Details
 | :--- | ---: 
+SubscriptionId | Azure Subscription ID to create resources
+tenantid | Azure tenant id 
+resourceGroupName | Name of resource group 
+resourceGroupLocation | Region to create items in Azure (i.e. East US2)
+azsynapsename | Name of Synapse workspace to create items 
+azstoragename | ADLS will be used by Synapse workspace (I keep mine separated from data lake storage) 15 or less characters
+containersys | Container to create in above ADLS storage acct
+ManagedVirtualNetwork | name for managed vnet 
+firewallrulename | name for a firewall rule to allow your local IP to connect 
+azstoragename2 | ADLS data lake storage account to land processed parquet files 
+containername1 | raw landing container name if using sample 
 
 
 ## Steps to create resources in Azure  
