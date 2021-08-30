@@ -1,9 +1,14 @@
 # Data Share Synapse Pipeline - 01 Create Resources
 
-The files in this location are to help build the resources we'll use in your Azure subscription.  The resources below will be create.  
+The files in this location are to help build the resources we'll use in your Azure subscription.  The script will create the resources below.  It will check for the existence of the items first so you can specify in the paramfile.json existing items.    
+
+Filename  | Details
+------------- | -------------
+00 - PreReqCheck.ps1  | PoSH script to help with pre-reqs
+01 - Create Resources DataShare.ps1  | Posh script to create items specified in Azure
 
 
-## Asset List - These items will be created in your Azure subscription 
+## Steps we'll  
 	1. Azure Resource Group
 	2. Azure Synapse Analytics workspace - all components will exist in the workspace
 	3. Azure Data Lake Gen 2 - will create one that's required for Synapse workspace but will leave alone 
