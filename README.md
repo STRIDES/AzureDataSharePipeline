@@ -28,7 +28,9 @@ Synapse datasets| DatasetNameX | Synapse Datasets to use in the pipeline
 Synapse pipeline | PipelineName1 | Synapse parameter driven pipeline
 
 
+
 The architecture of the solution diagrammed below.  
+
 
 ![alt text](https://github.com/hfoley/EDU/blob/master/images/Hope%20Data%20Share%20Architecture.jpg?raw=true)
 
