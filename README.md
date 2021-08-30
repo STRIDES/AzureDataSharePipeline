@@ -3,7 +3,7 @@
 This solution is to help build out a process to collect data wherever as long as it's contained in Azure storage account.  These PowerShell scripts will build out all the the components of this architecture using Synapse Analytics.  It will also build out the parameter driven pipelines to automate the sharing of the data (example with CSVs) across environments (internal & external).  GIANT SECURITY DISCLAIMER: Due to what this does, it's not the most secure way to setup an environment!!  You need to verify that you're going to be allowed to do this in your Azure environment.  You will need the connection string for the storage account to pull data from so there will need to clearance and blessings on both sides of this solution.  You may need to setup separate subscriptions/storage accounts that aren't under restrictions or policies such as HIPPA/etc.  PROCEED WITH CAUTION AND MAKE SURE YOU'VE GOTTEN APPROVAL FROM YOUR AZURE ADMINS!  
 	
 
-## What We'll Do - high level overview of steps  
+## What We'll Do - High Level Overview of Steps  
 	1. Download the files you'll need locally into one folder and note the folder location.  This code assumes all files are in one folder location without subfolders.   
 	2. Update the paramfile.json with the values and naming you want.  Update the values in the parentheses where there are < xxx > to the values you want.  Example below 
 		"resourceGroupName": "RGNameIWant",
