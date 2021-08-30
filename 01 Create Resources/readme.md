@@ -11,6 +11,13 @@ Filename  | Details
 paramfile.json | Parameter file containing all details passed to PoSH scripts 
 
 ## Steps to create resources in Azure  
+
+	 1. A numbered list
+              1. A nested numbered list
+              2. Which is numbered
+          2. Which is numbered
+
+
 	1. Download the files and save to a local folder. 
 	
 	2. Open the 00 - PreReqCheck.ps1 file in your preferred client to run PowerShell.  Visual Studio Code can be used for example (https://code.visualstudio.com/) or just within the PowerShell cmd window or ISE.  You can run selections within it to check and validate PowerShell version and required modules are installed.  
