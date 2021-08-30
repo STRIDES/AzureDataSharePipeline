@@ -6,6 +6,7 @@ Filename  | Details
 ------------- | -------------
 00 - PreReqCheck.ps1  | PoSH script to help with pre-reqs
 01 - Create Resources DataShare.ps1  | Posh script to create items specified in Azure
+paramfile.json | Parameter file containing all details passed to PoSH scripts 
 
 
 ## Steps we'll  
