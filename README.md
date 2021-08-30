@@ -21,6 +21,12 @@ Azure Synapse Analytics workspace | Synapse workspace to build the pipeline piec
 Azure Data Lake Gen 2 | ADLS Gen 2 that is specified for system use with Synapse 
 Azure Data Lake Gen 2 | ADLS Gen 2 that we will use for data lake to land refined parquet files
 
+Left aligned Header | Right aligned Header | Center aligned Header
+| :--- | ---: | :---:
+Content Cell  | Content Cell | Content Cell
+Content Cell  | Content Cell | Content Cell
+
+
 The architecture of the solution diagrammed below.  
 
 ![alt text](https://github.com/hfoley/EDU/blob/master/images/Hope%20Data%20Share%20Architecture.jpg?raw=true)
