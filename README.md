@@ -14,12 +14,18 @@ This solution is to help build out a process to collect data wherever as long as
 
 ## Asset List - These items will be created in your Azure subscription 
 
-The PowerShell scripts will create all the items below and is driven by values with the paramfile.  You will only need to edit the paramfile.json file.  
+The PowerShell scripts will create all the items below and is driven by values with the paramfile.  You will only need to edit the paramfile.json file.  The table below details all the components the solution will create and it's corresponding variable value in the paramfile.    
 
 Azure Item | paramfile value | Details
 | :--- | ---: | :---:
 Azure Resource Group   | resourceGroupName | All the components are built within 1 resource group 
 Azure Synapse Analytics workspace  | azsynapsename | Synapse Analytics workspace name
+Azure Data Lake Gen 2  | azstoragename | ADLS Gen 2 for system use of Synapse workspace
+Azure Data Lake Gen 2  | azstoragename2 | ADLS Gen 2 to land processed parquet files 
+Azure Key Vault | akvname | Azure Key Vault to store connection string info in secret
+Synapse Linked Services| LinkedServiceNameX | Linked Services to use in the pipeline 
+Synapse datasets| DatasetNameX | Synapse Datasets to use in the pipeline
+Synapse pipeline | PipelineName1 | Synapse parameter driven pipeline
 
 
 The architecture of the solution diagrammed below.  
