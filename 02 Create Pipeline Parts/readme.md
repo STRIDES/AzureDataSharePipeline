@@ -1,6 +1,6 @@
 # Data Share Synapse Pipeline - 02 Create Pipeline Parts
 
-The files in this location are to help build the resources within the Synapse workspace needed for the pipeline.  The script will create the resources below.  It will check for the existence of the items first so you can specify existing resources in the paramfile.json.  You will need to have the corresponding json files stored locally that drive the creation of the pieces in the Synapse workspace.  
+The files in this location are to help build the resources within the Synapse workspace needed for the pipeline.  The script will create the resources below.  It will check for the existence of the items first so you can specify existing resources in the paramfile.json.  You will also need to have the corresponding json files stored locally that drive the creation of the pieces in the Synapse workspace.  
 
 ## File Inventory
 
@@ -8,6 +8,13 @@ Filename  | Details
 ------------- | -------------
 03 - Create Pipeline Parts.ps1  | PoSH script to edit the json files with parameters specified and create components in Synapse workspace
 paramfile.json | Parameter file containing all details passed to PoSH scripts 
+AKVLS.json | Parameter file containing all details passed to PoSH scripts 
+CustomerStorageLS.json | Parameter file containing all details passed to PoSH scripts 
+DataLakeLS.json | Parameter file containing all details passed to PoSH scripts 
+DataLakeSinkDS.json | Parameter file containing all details passed to PoSH scripts 
+DynamicStorageSrcDS.json | Parameter file containing all details passed to PoSH scripts 
+DynamicDataPullPL.json | Parameter file containing all details passed to PoSH scripts 
+
 
 ## Steps to create resources in Azure  
 
