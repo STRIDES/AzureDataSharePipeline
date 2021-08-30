@@ -28,8 +28,8 @@ The architecture of the solution diagrammed below.
 	8. Synapse pipeline - will create a pipeline to pull data dynamically from storage account and land in ADLS gen 2 in parquet format(#4 listed above)
 	
 * [01 Create Resources](https://github.com/hfoley/DataSharePipeline/tree/main/01%20Create%20Resources)   - contains PowerShell scripts to build all the Azure components in the solution and grant necessary permissions. Skip this if you want to use existing resources.  
-* [02 Sample Data](https://github.com/hfoley/DataSharePipeline/tree/main/02%20Sample%20Data)   - contains a few example raw csv files extracted that detail hospitalization metrics from the site https://healthdata.gov/dataset/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/4cnb-m4rz 
-* [03 Create Pipeline Parts](https://github.com/hfoley/DataSharePipeline/tree/main/03%20Create%20Pipeline%20Parts)  - contains the PowerShell script 03 - Create Pipeline Parts.ps1 and correlated json files to build out the items needed for the pipeline to pull and process the csv files.   
+* [02 Create Pipeline Parts](https://github.com/hfoley/DataSharePipeline/tree/main/02%20Create%20Pipeline%20Parts) - contains the PowerShell script 02 - Create Pipeline Parts.ps1 and correlated json files to build out the items needed for the pipeline to pull and process the csv files.
+* [03 Sample Data](https://github.com/hfoley/DataSharePipeline/tree/main/03%20Sample%20Data) - contains a few example raw csv files extracted that detail hospitalization metrics from the site https://healthdata.gov/dataset/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/4cnb-m4rz   
 
 ## Pre-reqs
 There is a script you can use to help check for these pre-reqs and install them in 01 Create Resources folder called 00 - PreReqCheck.ps1. Open that file in your preferred PowerShell IDE (administrator mode is required to install anything).   
