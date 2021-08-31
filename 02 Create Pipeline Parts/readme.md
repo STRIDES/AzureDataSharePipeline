@@ -20,8 +20,8 @@ DynamicDataPullPL.json | Pipeline creation json file (PipelineFile1 in paramfile
 Synapse Item | paramfile value | Details
 | :--- | ---: | :---:
 Synapse Linked Service 1 | LinkedServiceName1 | Linked Services to data lake/azstoragename2
-Synapse Linked Service 2 | LinkedServiceName2 | Linked Services to data lake/azstoragename2
-Synapse Linked Service 3 | LinkedServiceName3 | Linked Services to data lake/azstoragename2
+Synapse Linked Service 2 | LinkedServiceName2 | Linked Services to Azure Key Vault/akvname
+Synapse Linked Service 3 | LinkedServiceName3 | Linked Services to dynamic Azure storage sources
 Synapse datasets| DatasetNameX | Synapse Datasets to use in the pipeline
 Synapse pipeline | PipelineName1 | Synapse parameter driven pipeline
 ## Steps to create resources in Azure  
