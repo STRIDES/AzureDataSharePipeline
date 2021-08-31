@@ -52,6 +52,15 @@ PipelineName1 | Pipeline name to extract data
 4.  Run the PowerShell script 01 - Create Resources DataShare.ps1 by running the following command in the PowerShell client of choice
 
 	`& "C:\localfolder\01 - Create Resources DataShare.ps1" -filepath "C:\localfolder\paramfile.json`
+	
+	a. You will be prompted to login to Azure.  Login as someone allowed to create items in the Azure subscription. (Note: you may see warnings if you are tied to multiple tenants) 
+	b. You'll be prompted for a user and password.  This text you type will become your SQL admin account for the Synapse workspace username and password. 
+		<insert pic>
+		c. The script will detail out the beginning of the creation of the resources.  For example if the resource group you specify in the paramfile.json for variable resourceGroupName doesn't exist, it will begin creating it and will write text below to the PowerShell screen.  
+			The resource group creation script was started  8/30/2021 8:31:59 PM
+			Resource group 'resourceGroupName' doesn't exist and will be created
+It will continue creating or skipping the creation of the components. ![image](https://user-images.githubusercontent.com/30324719/131423487-5bbebaea-5d40-438f-a760-cdcc32d92534.png)
+
 
 5.  Run 02 - GrantStorageRights.ps1 script by running the following command in the PowerShell client of choice
 
