@@ -26,8 +26,10 @@ DirectoryPath | supply further directory path for file location (leave blank if 
 
 2. Run the pipepline with parameter values appropriate (use table above for building parameters) via debug or trigger now.  Below is an example where I'll process one of the csv files contained in the storage account inside a folder called processed within the raw container (https://storageacct.blob.core.windows.net/raw/processed/6xf2-c3ie_2021-08-01T09-00-21.csv.  
 
-<span style="display:block;text-align:center">![alt text](https://github.com/hfoley/EDU/blob/master/images/pipelineparam.jpg?raw=true)</span>
 
+<p align="center">
+  <img src="https://github.com/hfoley/EDU/blob/master/images/pipelineparam.jpg?raw=true" alt="Sublime's custom image"/>
+</p>
   
 3. Validate the pipeline processed the raw CSV files and landed parquet files in your data lake storage refined container.  This will be within azstoragename2 ADLS Gen 2 storage account and within containername2 from your values in paramfile.json.  
 
