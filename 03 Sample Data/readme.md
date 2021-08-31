@@ -24,7 +24,7 @@ DirectoryPath | supply further directory path for file location (leave blank if 
 
 1. Store the above sample files or intended csv files into the Azure storage locations 
 
-2. Run the pipepline with parameter values appropriate (use table above for building parameters)
+2. Run the pipepline with parameter values appropriate (use table above for building parameters) via debug or trigger now.  
   
 3. Validate the pipeline processed the raw CSV files and landed parquet files in your data lake storage refined container.  
 
