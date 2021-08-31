@@ -25,7 +25,7 @@
                                                                                                           "type":  "AzureBlobStorageReadSettings",
                                                                                                           "recursive":  true,
                                                                                                           "wildcardFileName":  {
-                                                                                                                                   "value":  "@concat(pipeline().parameters.fileprefix, \u0027*.csv\u0027)",
+                                                                                                                                   "value":  "@concat(pipeline().parameters.FilePrefix, \u0027*.csv\u0027)",
                                                                                                                                    "type":  "Expression"
                                                                                                                                },
                                                                                                           "enablePartitionDiscovery":  false
@@ -59,15 +59,15 @@
                                                                  "type":  "DatasetReference",
                                                                  "parameters":  {
                                                                                     "srccontainer":  {
-                                                                                                         "value":  "@pipeline().parameters.container",
+                                                                                                         "value":  "@pipeline().parameters.Container",
                                                                                                          "type":  "Expression"
                                                                                                      },
-                                                                                    "secretname":  {
+                                                                                    "SecretName":  {
                                                                                                        "value":  "@pipeline().parameters.ParamSecret",
                                                                                                        "type":  "Expression"
                                                                                                    },
-                                                                                    "directorypath":  {
-                                                                                                          "value":  "@pipeline().parameters.directorypath",
+                                                                                    "DirectoryPath":  {
+                                                                                                          "value":  "@pipeline().parameters.DirectoryPath",
                                                                                                           "type":  "Expression"
                                                                                                       }
                                                                                 }
@@ -75,11 +75,11 @@
                                                          ],
                                               "outputs":  [
                                                               {
-                                                                  "referenceName":  "NIHCustSinkDynamic",
+                                                                  "referenceName":  "hfCustSinkDynamic",
                                                                   "type":  "DatasetReference",
                                                                   "parameters":  {
                                                                                      "filedsparam":  {
-                                                                                                         "value":  "@pipeline().parameters.container",
+                                                                                                         "value":  "@pipeline().parameters.Container",
                                                                                                          "type":  "Expression"
                                                                                                      }
                                                                                  }
@@ -92,15 +92,15 @@
                                                               "type":  "string",
                                                               "defaultValue":  "Secret Name in AKV"
                                                           },
-                                          "container":  {
+                                          "Container":  {
                                                             "type":  "string",
                                                             "defaultValue":  "raw"
                                                         },
-                                          "fileprefix":  {
+                                          "FilePrefix":  {
                                                              "type":  "string",
                                                              "defaultValue":  "Beginning of filename"
                                                          },
-                                          "directorypath":  {
+                                          "DirectoryPath":  {
                                                                 "type":  "string"
                                                             }
                                       },
