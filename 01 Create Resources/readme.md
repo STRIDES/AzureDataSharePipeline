@@ -57,7 +57,7 @@ PipelineName1 | Pipeline name to extract data
 	
 	b. You'll be prompted for a user and password.  This text you type will become your SQL admin account for the Synapse workspace username and password. 
 	
-		![alt text](https://github.com/hfoley/EDU/blob/master/images/sqladmin.jpg?raw=true)
+	![alt text](https://github.com/hfoley/EDU/blob/master/images/sqladmin.jpg?raw=true)
 		
 	c. The script will detail out the beginning of the creation of the resources.  For example if the resource group you specify in the paramfile.json for variable resourceGroupName doesn't exist, it will begin creating it and will write text below to the PowerShell screen.  
 			
