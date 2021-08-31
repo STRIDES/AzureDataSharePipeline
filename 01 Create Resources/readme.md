@@ -63,6 +63,7 @@ PipelineName1 | Pipeline name to extract data
 	Resource group 'resourceGroupName' doesn't exist and will be created
 	
 	d. It will continue creating or skipping the creation of the components. 
+	
 	e. You will then be prompted for text to input for akvsecret1 and akvsecret2.  Input into the text box the connection string for the storage account containing the data source CSVs.  You can get to the connection string text in the Access Keys panel in the Azure portal for the storage account.  https://docs.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?tabs=azure-portal  
 
 
