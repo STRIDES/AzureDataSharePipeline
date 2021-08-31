@@ -16,9 +16,9 @@ The pipeline created will have the following parameters (case sensitive).
 Pipeline parameter | Details
 | :--- | :--- 
 ParamSecret | name of the secret that contains the connection string for the storage account (akvsecret1/akvsecret2)
-container | root container for the path where the csv file resides
-fileprefix | text that the filename begins with
-directorypath | supply further directory path for file location (leave blank if in root container above)
+Container | root container for the path where the csv file resides
+FilePrefix | text that the filename begins with
+DirectoryPath | supply further directory path for file location (leave blank if in root container above)
 
 ## Steps to setup and run pipeline
 
