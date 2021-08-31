@@ -61,8 +61,8 @@ PipelineName1 | Pipeline name to extract data
 		
 	c. The script will detail out the beginning of the creation of the resources.  For example if the resource group you specify in the paramfile.json for variable resourceGroupName doesn't exist, it will begin creating it and will write text below to the PowerShell screen.  
 			
-	The resource group creation script was started  8/30/2021 8:31:59 PM
-	Resource group 'resourceGroupName' doesn't exist and will be created
+		The resource group creation script was started  8/30/2021 8:31:59 PM
+		Resource group 'resourceGroupName' doesn't exist and will be created
 	
 	d. It will continue creating or skipping the creation of the components. 
 	
