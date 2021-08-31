@@ -15,7 +15,13 @@ DataLakeSinkDS.json | Dataset to land parquet files in data lake json file (Data
 DynamicStorageSrcDS.json | Dynamic source dataset to pull CSV files from (DatasetFile1 in paramfile)  
 DynamicDataPullPL.json | Pipeline creation json file (PipelineFile1 in paramfile) 
 
+## Synapse Item Inventory
 
+Synapse Item | paramfile value | Details
+| :--- | ---: | :---:
+Synapse Linked Services| LinkedServiceNameX | Linked Services to use in the pipeline 
+Synapse datasets| DatasetNameX | Synapse Datasets to use in the pipeline
+Synapse pipeline | PipelineName1 | Synapse parameter driven pipeline
 ## Steps to create resources in Azure  
 
 Step 1 - Download the files and save to a local folder if you haven't already. 
