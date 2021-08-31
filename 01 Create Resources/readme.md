@@ -73,6 +73,8 @@ PipelineName1 | Pipeline name to extract data
 5.  Run 02 - GrantStorageRights.ps1 script by running the following command in the PowerShell client of choice
 
 	`& "C:\localfolder\02 - GrantStorageRights.ps1" -filepath "C:\localfolder\paramfile.json`
+	
+	a. You'll be prompted to login.  Again supply and login as an account that can grant rights to ADLS for managed service identity for Synapse and Admin.  It will also grant rights to the MSI to get secrets within the Azure Key Vault.  
 
 6.  Validate all the resources were successfully created in your Azure environment.  
 
