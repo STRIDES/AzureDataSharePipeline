@@ -11,7 +11,7 @@ Filename  | Details
 02 - GrantStorageRights.ps1 | Posh script to grant rights required 
 paramfile.json | Parameter file containing all details passed to PoSH scripts 
 
-You will need to update the paramfile.json file before you run the PowerShell scripts above.  It is used to drive all the PowerShell scripts and is the only file that needs input/editing.  Below is a listing of the variables within the file and a description.  Values above line 24 need updating.  Lines 24 and below do not need editing. 
+You will need to update the paramfile.json file before you run the PowerShell scripts above.  It is used to drive all the PowerShell scripts and is the only file that needs input/editing.  Below is a listing of the variables within the paramfile and a description.  Values above line 24 within the file need updating.  Lines 24 and below do not need editing. 
 
 ## Paramfile Variable Details
 paramfile value | Details
