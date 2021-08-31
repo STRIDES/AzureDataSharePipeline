@@ -42,6 +42,8 @@ Step 1 - Download the files and save to a local folder if you haven't already. D
 4.  Run the PowerShell script 03 - Create Pipeline Parts.ps1 by running the following command in the PowerShell client of choice
 
 	`& "C:\localfolder\03 - Create Pipeline Parts.ps1" -filepath "C:\localfolder\paramfile.json`
+	
+	a.  You will be prompted to login to Azure. Login as someone allowed to create items in the Azure Synapse workspace. (Note: you may see warnings if you are tied to multiple tenants)
 
 5.  Verify all the components created within Synapse workspace. 
 
