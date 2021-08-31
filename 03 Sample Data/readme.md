@@ -24,8 +24,10 @@ DirectoryPath | supply further directory path for file location (leave blank if 
 
 1. Store the above sample files or intended csv files into the Azure storage locations 
 
-2. Run the pipepline with parameter values appropriate (use table above for building parameters) via debug or trigger now.  
+2. Run the pipepline with parameter values appropriate (use table above for building parameters) via debug or trigger now.  Below is an example where I'll process one of the csv files contained in the storage account inside a folder called processed within the raw container (https://<storageacct>.blob.core.windows.net/raw/processed/6xf2-c3ie_2021-08-01T09-00-21.csv.  
+
+![alt text](https://github.com/hfoley/EDU/blob/master/images/pipelineparam.jpg?raw=true)
   
-3. Validate the pipeline processed the raw CSV files and landed parquet files in your data lake storage refined container.  
+3. Validate the pipeline processed the raw CSV files and landed parquet files in your data lake storage refined container.  This will be within azstoragename2 ADLS Gen 2 storage account and within containername2 from your values in paramfile.json.  
 
 4. Please provide feedback to Hope via Twitter (https://twitter.com/hope_foley) or LinkedIn (https://www.linkedin.com/in/hopefoley/).  
