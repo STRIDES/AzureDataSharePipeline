@@ -68,8 +68,8 @@ PipelineName1 | Pipeline name to extract data
 	
 	e. You will then be prompted for text to input for akvsecret1 and akvsecret2.  Input into the text box the connection string for the storage account containing the data source CSVs.  You can get to the connection string text in the Access Keys panel in the Azure portal for the storage account.  https://docs.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?tabs=azure-portal  
 
-
-
+	![alt text](https://github.com/hfoley/EDU/blob/master/images/AKVsecret.jpg?raw=true)
+	
 5.  Run 02 - GrantStorageRights.ps1 script by running the following command in the PowerShell client of choice
 
 	`& "C:\localfolder\02 - GrantStorageRights.ps1" -filepath "C:\localfolder\paramfile.json`
