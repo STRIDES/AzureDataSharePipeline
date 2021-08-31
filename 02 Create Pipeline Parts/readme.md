@@ -1,6 +1,6 @@
 # Data Share Synapse Pipeline - 02 Create Pipeline Parts
 
-The files in this location are to help build the resources within the Synapse workspace needed for the pipeline.  The script will create the resources below.  It will check for the existence of the items first so you can specify existing resources in the paramfile.json.  You will also need to have the corresponding json files stored locally that drive the creation of the pieces in the Synapse workspace.  
+The files in this location are to help build the resources within the Synapse workspace needed for the pipeline.  You'll need to download the files into a local folder path (use the same folder used in 01 Create Resources and use existing paramfile.json).  You  The script will create the resources below.  It will check for the existence of the items first so you can specify existing resources in the paramfile.json.  You will also need to have the corresponding json files stored locally that drive the creation of the pieces in the Synapse workspace.  
 
 ## File Inventory
 
