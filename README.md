@@ -41,7 +41,7 @@ Navigate to each section to view the scripts needed and for further details.
 * [03 Sample Data](https://github.com/hfoley/DataSharePipeline/tree/main/03%20Sample%20Data) - contains a few example raw csv files extracted that detail hospitalization metrics from the site https://healthdata.gov/dataset/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/4cnb-m4rz   
 
 ## Pre-reqs
-There is a script you can use to help check for these pre-reqs and install them in 01 Create Resources folder called 00 - PreReqCheck.ps1. 
+There is a script you can use to help check for these pre-reqs and install them in 01 Create Resources folder called 00 - PreReqCheck.ps1. Navigate to [01 Create Resources](https://github.com/hfoley/DataSharePipeline/tree/main/01%20Create%20Resources) for more details on running the script.  
 
 1. Open that file in your preferred PowerShell IDE (administrator mode is required to install anything). 
 2. PowerShell 5.1 or above needs installed locally.  You can check this by running the following script. 
