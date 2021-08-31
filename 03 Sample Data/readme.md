@@ -3,20 +3,22 @@
 The files in this location are to help build out a sample source dataset to run through the pipeline.  These files that are stored here were downloaded from 	https://healthdata.gov/dataset/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/4cnb-m4rz.  These csv files contain hospitalization data for July and August of 2021.  
 
 ## File Inventory
-You need to download and store these files in an Azure storage account 
+You need to download and upload these files into a couple Azure storage accounts.  You should have supplied the connection string information in the running of 01 - Create Resources DataShare.ps1 where it prompts you for AKV secret.  Upload the files to any folder location within the storage accounts.  
 
 Filename  | Details
 ------------- | -------------
 6xf2-c3ie_2021-07-01T09-00-23.csv | July of 2021 csv
 6xf2-c3ie_2021-08-01T09-00-21.csv  | August of 2021 csv (partial month data)
 
-You will need to upload the files above into storage locations that you can obtain the connection string information.  
 
 ## Pipeline parameters
+The pipeline created will have the following parameters (case sensitive).  
 Pipeline parameter | Details
 | :--- | :--- 
-tbd | bla
-tbd | bla 
+ParamSecret | name of the secret that contains the connection string for the storage account (akvsecret1/akvsecret2)
+container | root container for the path where the csv file resides
+fileprefix | text that the filename begins with
+directorypath | supply further directory path for file location (leave blank if in root container above)
 
 ## Steps to setup and run pipeline
 
