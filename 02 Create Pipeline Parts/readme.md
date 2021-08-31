@@ -28,15 +28,15 @@ Synapse pipeline| PipelineName1 | Dataset to dynamic Azure storage source (Linke
 
 ## Steps to create resources in Azure  
 
-Step 1 - Download the files and save to a local folder if you haven't already. 
+Step 1 - Download the files and save to a local folder if you haven't already. Don't overlay paramfile.json if you've already setup a file. 
 
 1. Download all the files contained in this folder and save to a local folder location.  
 
-2. Skip this step if you did already in 01 Create Resources section.  Open the 00 - PreReqCheck.ps1 file in your preferred client to run PowerShell.  Visual Studio Code can be used for example (https://code.visualstudio.com/) or the PowerShell ISE.  You can step through and run selections of the code to check and validate PowerShell version and required modules are installed.
+2. **Skip this step if you did already in 01 Create Resources section.**  Open the 00 - PreReqCheck.ps1 file in your preferred client to run PowerShell.  Visual Studio Code can be used for example (https://code.visualstudio.com/) or the PowerShell ISE.  You can step through and run selections of the code to check and validate PowerShell version and required modules are installed.
   
 ![alt text](https://github.com/hfoley/EDU/blob/master/images/VSCodeRunSelection.jpg?raw=true)
 
-3. Skip this step if you did already in 01 Create Resources section.  Open and update all the values needed within the paramfile.json.  Anything that contains <> requires your input.  Replace all the values including the <> within the " ".  
+3. **Skip this step if you did already in 01 Create Resources section.**  Open and update all the values needed within the paramfile.json.  Anything that contains <> requires your input.  Replace all the values including the <> within the " ".  
 	![alt text](https://github.com/hfoley/EDU/blob/master/images/EditingParamFile.jpg?raw=true)
   
 4.  Run the PowerShell script 03 - Create Pipeline Parts.ps1 by running the following command in the PowerShell client of choice
