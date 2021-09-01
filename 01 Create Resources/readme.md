@@ -5,7 +5,7 @@ The files in this location are to help build the resources we'll use in your Azu
 ## File Inventory
 You need to download and save the files listed here to your local machine.  
 Filename  | Details
-------------- | -------------
+| :--- | :--- 
 00 - PreReqCheck.ps1  | PoSH script to help with pre-reqs
 01 - Create Resources DataShare.ps1  | Posh script to create items specified in Azure
 02 - GrantStorageRights.ps1 | Posh script to grant rights required 
