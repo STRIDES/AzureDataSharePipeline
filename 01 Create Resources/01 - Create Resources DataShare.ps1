@@ -1,14 +1,14 @@
 ﻿<# This file is driven by parameter file passed.  
 There is a sample starting one in the github repo called paramfile.json 
-You'll need to update that file and pass when running this script. 
-Put all the files in the same folder as the paramfile.  
+You'll need to update that file and pass as the variable when running this script. 
+Put all the files used in this automation in the same folder as the paramfile.  
 
-Tips: Storage requires lowercase only in naming 
+Tips: Storage accounts require lowercase only in naming 
 Tips: Synapse SQL Pools have to be 15 or less characters 
-Tips: prefix should be small 3-5 characters to not cause issues with rules for storage for example
+
 
 You can run this script by sample syntax below: 
-& "C:\loalfolder\01 - CreateDataShareResources.ps1" -filepath "C:\localfolder\paramfile.json"
+& "C:\PSScripts\01 - CreateDataShareResources.ps1" -filepath "C:\PSScripts\paramfile.json"
 
  #>
 
@@ -146,8 +146,6 @@ if(-not $SynapseCheck)
     {
     Write-Host "Synapse workspace '$azsynapsename' doesn't exist and will be created"
     $config = New-AzSynapseManagedVirtualNetworkConfig -AllowedAadTenantIdsForLinking $tenantid
-    #$creds = New-Object System.Management.Automation.PSCredential ((Get-Credential -message "pscreds one?"))
-    #New-AzSynapseWorkspace -ResourceGroupName $resourceGroupName -Name $azsynapsename -Location $resourceGroupLocation -DefaultDataLakeStorageAccountName $azstoragename -DefaultDataLakeStorageFilesystem $containersys -ManagedVirtualNetwork $ManagedVirtualNetwork -SqlAdministratorLoginCredential (Get-Credential)
     New-AzSynapseWorkspace -ResourceGroupName $resourceGroupName -Name $azsynapsename -Location $resourceGroupLocation -DefaultDataLakeStorageAccountName $azstoragename -DefaultDataLakeStorageFilesystem $containersys -SqlAdministratorLoginCredential (Get-Credential -Message "SQL Admin") -ManagedVirtualNetwork $config
     }
 else 
@@ -174,7 +172,6 @@ write-host "Ended Synapse firewall rule creation script at " $endTime
 $startTime = Get-Date
 
 Write-Host "The Azure Key Vault script was started " $startTime
-Write-Host "Beginning creation of " $akvname
 
 $AKVCheck = Get-AzKeyVault -VaultName $akvname -ErrorAction SilentlyContinue
 if(-not $AKVCheck)
@@ -211,15 +208,15 @@ $SecretCheck2 = Get-AzKeyVaultSecret -VaultName $akvname -Name $akvsecret2 -Erro
 if(-not $SecretCheck2)
     {
     Write-Host "Azure Key Vault secret '$akvsecret2' doesn't exist and will be created"
-    $Secret2 = Read-Host -Prompt "Enter text for AKV secret '$akvsecret2'" -AsSecureString
+   $Secret2 = Read-Host -Prompt "Enter text for AKV secret '$akvsecret2'" -AsSecureString
     Set-AzKeyVaultSecret -VaultName $akvname -Name $akvsecret2 -SecretValue $Secret2
     }
 else 
     {Write-Host "Azure Key Vault '$akvsecret2' already created"}
 
+
 $endTime = Get-Date
 
 write-host "Ended Azure Key Vault creation script at " $endTime
-
 write-host "Total resources creation script finish at " $endTime
 
