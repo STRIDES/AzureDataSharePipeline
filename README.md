@@ -5,10 +5,10 @@ This solution is to help build out a process to collect data contained in an Azu
 
 ## What We'll Do - High Level Overview of Steps  
 
-1. Download the files you'll need locally into one folder and note the folder location.  This code assumes all files are in one folder location without subfolders.   
+1. Download the files you'll need locally **into one folder** and note the folder location.  When you download the full zip from this location, it will separate out into separate folders.  Move all the files you'll run into one folder.  This code assumes all files are in one folder location without subfolders.  The subfolders are for organization and segementation for those who create all the components and those who just run the pipeline creation.  
 2. Update the paramfile.json with the values and naming you want and save.  
 3. Run the PowerShell scripts you need.  If you need to build out the items in Azure, you'll run: 
-	& "C:\localfolder\01 - BaseInstall.ps1" -filepath "C:\localfolder\paramfile.json"!
+	& "C:\localfolder\01 - BaseInstall.ps1" -filepath "C:\localfolder\paramfile.json"
 4. Save CSV files in appropriate source locations you want to use to pull data from.  
 5. Run the pipeline with appropriate parameter values.  
 
