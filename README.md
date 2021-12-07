@@ -7,9 +7,9 @@ The architecture of the solution diagrammed below.
 
 ![alt text](https://github.com/hfoley/EDU/blob/master/images/Hope%20Data%20Share%20Architecture.jpg?raw=true)
 
-## Solution Details - Overview of what the solution is and does 
-1. This full solution will create an Azure Synapse Analytics workspace and surrounding technologies 
-2. This also builds a parameterized pipeline that can reach out into storage accounts to get csv files.  It will process them and land them into a consolidated ADLS Gen 2 data lake storage account into parquet files.  
+## Solution Details - Overview of what the solution is and what it does 
+1. This full solution will create an Azure Synapse Analytics workspace, 2 ADLS Gen 2 storage accounts, and an Azure Key Vault.   
+2. This also builds a parameterized pipeline that can reach into storage accounts to grab csv files and process them.  It will process them and land them into a consolidated ADLS Gen 2 data lake storage account into parquet files.  
 3. It utilizes Azure Key Vault secrets that contain the storage account connection strings (connection info containing storage keys - https://docs.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#regenerate-access-keys)  
 4. The example CSV files can be landed into any storage account that you have access to the storage keys.  You can land them in any location you'd like just note the location. 
 5. You can run the pipeline passing in parameters detailing the secret name, container, filename prefix, and further directory pathing if needed.  
@@ -25,14 +25,12 @@ Azure Synapse Analytics workspace  | azsynapsename | Synapse Analytics workspace
 Azure Data Lake Gen 2  | azstoragename | ADLS Gen 2 for system use of Synapse workspace
 Azure Data Lake Gen 2  | azstoragename2 | ADLS Gen 2 to land processed parquet files 
 Azure Key Vault | akvname | Azure Key Vault to store connection string info in secret
-1 Synapse Linked Services| LinkedServiceNameX | Linked Services to use in the pipeline 
+3 Synapse Linked Services| LinkedServiceNameX | Linked Services to use in the pipeline 
 Synapse datasets| DatasetNameX | Synapse Datasets to use in the pipeline
 Synapse pipeline | PipelineName1 | Synapse parameter driven pipeline
 
 
-
-
-## What  - High Level Overview of Steps  
+## What Needs to Be Done - High Level Overview of Steps  
 
 1. Download the files you'll need locally **into one folder** and note the folder location.  When you download the full zip from this location, it will separate out into separate folders.  Move all the files you'll run into one folder.  This code assumes all files are in one folder location without subfolders.  The subfolders are for organization and segementation for those who create all the components and those who just run the pipeline creation.  
 2. Update the paramfile03.json with the values and naming you want and save.  
