@@ -1,7 +1,19 @@
 # Data Sharing - Synapse Analytics Pipeline Solution Pattern 
 
 This solution is to help build out a process to collect data contained in an Azure storage account, internal or external.  These PowerShell scripts will build out all the the components of this architecture using a Synapse Analytics workspace, Azure Data Lake storage, and an Azure Key Vault.  It will also build out the parameter driven pipelines to automate the sharing of the data (example uses CSVs) across environments.  **GIANT SECURITY DISCLAIMER**: Due to what this does, it's not the most secure way to setup an environment!!  You need to verify that you're going to be allowed to do this in your Azure environment and potentially plan the location based on policies/etc.  You will need the connection string for the storage account to pull data from so there will need to clearance and blessings on both sides of this solution.  You may need to setup separate subscriptions/storage accounts that aren't under restrictions or policies such as HIPPA/etc.  **PROCEED WITH CAUTION AND MAKE SURE YOU'VE GOTTEN APPROVAL FROM YOUR AZURE ADMINS AND DATA GOVERNANCE ENTITIES!**  
-	
+
+The architecture of the solution diagrammed below.  
+
+
+![alt text](https://github.com/hfoley/EDU/blob/master/images/Hope%20Data%20Share%20Architecture.jpg?raw=true)
+
+## Solution Details - Overview of what the solution is and does 
+1. This full solution will create an Azure Synapse Analytics workspace and surrounding technologies 
+2. This also builds a parameterized pipeline that can reach out into storage accounts to get csv files.  It will process them and land them into a consolidated ADLS Gen 2 data lake storage account into parquet files.  
+3. It utilizes Azure Key Vault secrets that contain the storage account connection strings (connection info containing storage keys - https://docs.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#regenerate-access-keys)  
+4. The example CSV files can be landed into any storage account that you have access to the storage keys.  You can land them in any location you'd like just note the location. 
+5. You can run the pipeline passing in parameters detailing the secret name, container, filename prefix, and further directory pathing if needed.  
+
 ## Asset List - These items will be created in your Azure subscription 
 
 The PowerShell scripts will create all the items below and is driven by values with the paramfile.  You will only need to edit the paramfile.json file.  The table below details all the components the solution will create and it's corresponding variable value in the paramfile.    
@@ -13,15 +25,12 @@ Azure Synapse Analytics workspace  | azsynapsename | Synapse Analytics workspace
 Azure Data Lake Gen 2  | azstoragename | ADLS Gen 2 for system use of Synapse workspace
 Azure Data Lake Gen 2  | azstoragename2 | ADLS Gen 2 to land processed parquet files 
 Azure Key Vault | akvname | Azure Key Vault to store connection string info in secret
-Synapse Linked Services| LinkedServiceNameX | Linked Services to use in the pipeline 
+1 Synapse Linked Services| LinkedServiceNameX | Linked Services to use in the pipeline 
 Synapse datasets| DatasetNameX | Synapse Datasets to use in the pipeline
 Synapse pipeline | PipelineName1 | Synapse parameter driven pipeline
 
 
-The architecture of the solution diagrammed below.  
 
-
-![alt text](https://github.com/hfoley/EDU/blob/master/images/Hope%20Data%20Share%20Architecture.jpg?raw=true)
 
 ## What  - High Level Overview of Steps  
 
