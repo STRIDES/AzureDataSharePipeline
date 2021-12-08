@@ -41,7 +41,8 @@ DynamicDataPullPL | Json file tied to creation of pipeline with copy task to pul
   Azure CLI:  `./"03 - Create Pipeline Parts DataShare.ps1" -filepath ./paramfile03.json`<br>
   Locally:  `& "C:\folder\03 - Create Pipeline Parts DataShare.ps1" -filepath "C:\folder\paramfile03.json"`
 6. Navigate to the Synapse workspace and open up Synapse Studio.  Navigate to the integrate pane (far left pipe icon).  You can now run the DataShare pipeline.  It will be named what you supplied in the PipelineName1 variable in the paramfile03.json file.  You'll need to supply parameter values when running the pipeline detailed below.  
-7. Verify that the parquet files land in the ADLS Gen 2 location (azstoragename2) within containername2 variables from paramfile03.json.  
+7. Verify that the parquet files land in the ADLS Gen 2 location (azstoragename2) within containername2 variables from paramfile03.json. 
+  
 Parameter Name | Value details
 | :--- | :---
 ParamSecret   | Name of the secret containing connection string 
