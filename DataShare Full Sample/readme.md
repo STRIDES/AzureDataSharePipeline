@@ -5,9 +5,11 @@ This folder contains the files you'll need to create all the components for the 
 
 Filename  | Description
 ------------- | -------------
-paramfile03.json | Parameter file that needs to be updated prior to running scripts
+paramfile03.json | **Only file to update** Parameter file that all PowerShell scripts use
+00 - PreReqCheck.ps1 | Script that can be used to check for modules needed
 01 - Create Resources DataShare.ps1  | Creates all the items in Azure subscription
-02 - GrantRightsDataShare.ps1 | Will grant rights to MSI and setup get secret permissions for Azure Key Vault
+02 - GrantRightsDataShareCLI.ps1 | Will grant rights to MSI and setup get secret permissions for Azure Key Vault using Azure CLI
+02 - GrantRightsDataShare.ps1 | Will grant rights to MSI and setup get secret permissions for Azure Key Vault using local machine PowerShell
 03 - Create Pipeline Parts DataShare.ps1 | Will create the pipelines and related items in Synapse workspace
 AKVLS.json | Json file for creation of the linked server pointing to ADLS Gen 2 (azstorage2 in paramfile01.json)
 LinkedServiceAzureSQLDB.json | Json file tied to the creation of the linked server pointing to Azure SQL DB 
