@@ -45,12 +45,12 @@ Synapse pipeline | PipelineName1 | Synapse parameter driven pipeline
 	
 5. Run the pipeline with appropriate parameter values.  
 
-Parameter Name | paramfile value 
+Parameter Name | Value details
 | :--- | :---:
-Azure Resource Group   | resourceGroupName  
-Azure Synapse Analytics workspace  | azsynapsename 
-Azure Data Lake Gen 2  | azstoragename 
-Azure Data Lake Gen 2  | azstoragename2 
+ParamSecret   | Name of the secret containing connection string 
+Container  | Name of container holding CSV files
+FilePrefix  | All CSVs that begin with this text will be processed 
+DirectoryPath  | azstoragename2 
 
 ## Pre-reqs
 There is a script you can use to help check for these pre-reqs and install them called 00 - PreReqCheck.ps1. Navigate to [01 Create Resources](https://github.com/hfoley/DataSharePipeline/tree/main/01%20Create%20Resources) for more details on running the script.  
