@@ -44,14 +44,10 @@ Synapse pipeline | PipelineName1 | Synapse parameter driven pipeline
 		* `./"03 - Create Pipeline Parts DataShare.ps1" -filepath ./paramfile03.json`
 	
 5. Run the pipeline with appropriate parameter values.  
-	
-Navigate to each section to view the scripts needed and for further details.  
-* [01 Create Resources](https://github.com/hfoley/DataSharePipeline/tree/main/01%20Create%20Resources)   - contains PowerShell scripts to build all the Azure components in the solution and grant necessary permissions. Skip this if you want to use existing resources.  
-* [02 Create Pipeline Parts](https://github.com/hfoley/DataSharePipeline/tree/main/02%20Create%20Pipeline%20Parts) - contains the PowerShell script 02 - Create Pipeline Parts.ps1 and correlated json files to build out the items needed for the pipeline to pull and process the csv files.
-* [03 Sample](https://github.com/hfoley/DataSharePipeline/tree/main/03%20Sample%20Data) - contains the entire soluiton plus a few example raw csv files 
+	 
 
 ## Pre-reqs
-There is a script you can use to help check for these pre-reqs and install them in 01 Create Resources folder called 00 - PreReqCheck.ps1. Navigate to [01 Create Resources](https://github.com/hfoley/DataSharePipeline/tree/main/01%20Create%20Resources) for more details on running the script.  
+There is a script you can use to help check for these pre-reqs and install them called 00 - PreReqCheck.ps1. Navigate to [01 Create Resources](https://github.com/hfoley/DataSharePipeline/tree/main/01%20Create%20Resources) for more details on running the script.  
 
 1. Open that file in your preferred PowerShell IDE (administrator mode is required to install anything). 
 2. PowerShell 5.1 or above needs installed locally.  You can check this by running the following script. 
