@@ -16,7 +16,7 @@ The architecture of the solution diagrammed below.
 
 ## Asset List - These items will be created in your Azure subscription 
 
-The PowerShell scripts will create all the items below and is driven by values with the paramfile.  You will only need to edit the paramfile.json file.  The table below details all the components the solution will create and it's corresponding variable value in the paramfile.    
+The PowerShell scripts will create all the items below and is driven by values with the paramfile.  You will only need to edit the paramfile03.json file.  The table below details all the components the solution will create and it's corresponding variable value in the paramfile.    
 
 Azure Item | paramfile value | Details
 | :--- | ---: | :---:
@@ -32,7 +32,7 @@ Synapse pipeline | PipelineName1 | Synapse parameter driven pipeline
 
 ## What Needs to Be Done - High Level Overview of Steps  
 
-1. Download the files you'll need locally **into one folder** and note the folder location.  When you download the full zip from this location, it will separate out into separate folders.  Move all the files you'll run into one folder.  This code assumes all files are in one folder location without subfolders.  The subfolders are for organization and segementation for those who create all the components and those who just run the pipeline creation.  
+1. Download the files contained within [DataShare Full Sample](https://github.com/hfoley/DataSharePipeline/tree/main/DataShare%20Full%20Sample) locally to your machine.  All the files  
 2. Update the paramfile03.json with the values and naming you want and save.  
 3. Run the PowerShell scripts you need.  If you need to build out the items in Azure and use sample data, you'll run: 
 	& "C:\localfolder\01 - BaseInstall.ps1" -filepath "C:\localfolder\paramfile.json"
