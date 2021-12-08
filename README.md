@@ -44,6 +44,7 @@ Synapse pipeline | PipelineName1 | Synapse parameter driven pipeline
 		* `./"03 - Create Pipeline Parts DataShare.ps1" -filepath ./paramfile03.json`
 	
 5. Run the pipeline with appropriate parameter values.  
+
 Parameter Name | paramfile value | Details
 | :--- | ---: | :---:
 Azure Resource Group   | resourceGroupName | All the components are built within 1 resource group 
