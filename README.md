@@ -44,10 +44,16 @@ Synapse pipeline | PipelineName1 | Synapse parameter driven pipeline
 		* `./"03 - Create Pipeline Parts DataShare.ps1" -filepath ./paramfile03.json`
 	
 5. Run the pipeline with appropriate parameter values.  
-	 ParameterName | Details
-		| :--- | ---: 
-	Azure Resource Group   | resourceGroupName  
-	Azure Synapse Analytics workspace  | somthein
+Parameter Name | paramfile value | Details
+| :--- | ---: | :---:
+Azure Resource Group   | resourceGroupName | All the components are built within 1 resource group 
+Azure Synapse Analytics workspace  | azsynapsename | Synapse Analytics workspace name
+Azure Data Lake Gen 2  | azstoragename | ADLS Gen 2 for system use of Synapse workspace
+Azure Data Lake Gen 2  | azstoragename2 | ADLS Gen 2 to land processed parquet files 
+Azure Key Vault | akvname | Azure Key Vault to store connection string info in secret
+3 Synapse Linked Services| LinkedServiceNameX | Linked Services to use in the pipeline 
+Synapse datasets| DatasetNameX | Synapse Datasets to use in the pipeline
+Synapse pipeline | PipelineName1 | Synapse parameter driven pipeline
 
 ## Pre-reqs
 There is a script you can use to help check for these pre-reqs and install them called 00 - PreReqCheck.ps1. Navigate to [01 Create Resources](https://github.com/hfoley/DataSharePipeline/tree/main/01%20Create%20Resources) for more details on running the script.  
