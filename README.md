@@ -11,7 +11,7 @@ The architecture of the solution diagrammed below.
 1. This full solution will create an Azure Synapse Analytics workspace, 2 ADLS Gen 2 storage accounts, and an Azure Key Vault.   
 2. This also builds a parameterized pipeline that can reach into storage accounts to grab csv files and process them.  It will process them and land them into a consolidated ADLS Gen 2 data lake storage account into parquet files.  
 3. It utilizes Azure Key Vault secrets that contain the storage account connection strings (connection info containing storage keys - https://docs.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#regenerate-access-keys)  
-4. The example CSV files can be landed into any storage account that you have access to the storage keys.  You can land them in any location you'd like just note the location. 
+4. The example CSV files can be landed into any storage account that you have access to the storage keys.  You can land them in any location you'd like, just note the location. 
 5. You can run the pipeline passing in parameters detailing the secret name, container, filename prefix, and further directory pathing if needed.  
 
 ## Asset List - These items will be created in your Azure subscription 
