@@ -36,9 +36,8 @@ Synapse pipeline | PipelineName1 | Synapse parameter driven pipeline
 2. Update the paramfile03.json with the values and naming you want and save.  
 3. Save CSV files in appropriate source Azure storage locations you want to use to pull data from.  Capture the text of the connection string for later use running the scripts.  
 4. Run the PowerShell scripts you need.  Below are the commands you'll run using Azure CLI to build the full solution. (blog on setting up Azure CLI to run scripts https://hopefoley.com/2021/09/27/powershell-in-the-clouds/)   
-	* Build all the pieces in Azure: 
+	* Build all the pieces in Azure (You'll be prompted a few times for information. 1 - user and password for SQL Admin account for Synapse. 2 - text for connection string to storage account.  This will build 2 secrets you can use for the pipeline.): 
 		* `./"01 - Create Resources DataShare.ps1" -filepath ./paramfile03.json()` 
-		* (You'll be prompted a few times for information. 1 - user and password for SQL Admin account for Synapse. 2 - text for connection string to storage account.  This will build 2 secrets you can use for the pipeline.)
 	* Grant rights for storage and AKV:
 		* `./"02 - GrantRightsDataShareCLI.ps1" -filepath ./paramfile03.json()`
 	* Build the Synapse pipeline components:
