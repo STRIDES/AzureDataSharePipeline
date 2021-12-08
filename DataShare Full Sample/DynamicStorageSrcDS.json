@@ -1,0 +1,52 @@
+{
+    "name":  "DynamicCustStorageSrc",
+    "properties":  {
+                       "linkedServiceName":  {
+                                                 "referenceName":  "nihCustomerLS",
+                                                 "type":  "LinkedServiceReference",
+                                                 "parameters":  {
+                                                                    "secretname":  {
+                                                                                       "value":  "@dataset().secretname",
+                                                                                       "type":  "Expression"
+                                                                                   }
+                                                                }
+                                             },
+                       "parameters":  {
+                                          "srccontainer":  {
+                                                               "type":  "string",
+                                                               "defaultValue":  "highered"
+                                                           },
+                                          "secretname":  {
+                                                             "type":  "string"
+                                                         },
+                                          "directorypath":  {
+                                                                "type":  "string"
+                                                            }
+                                      },
+                       "annotations":  [
+
+                                       ],
+                       "type":  "DelimitedText",
+                       "typeProperties":  {
+                                              "location":  {
+                                                               "type":  "AzureBlobStorageLocation",
+                                                               "folderPath":  {
+                                                                                  "value":  "@dataset().directorypath",
+                                                                                  "type":  "Expression"
+                                                                              },
+                                                               "container":  {
+                                                                                 "value":  "@dataset().srccontainer",
+                                                                                 "type":  "Expression"
+                                                                             }
+                                                           },
+                                              "columnDelimiter":  ",",
+                                              "escapeChar":  "\"",
+                                              "firstRowAsHeader":  true,
+                                              "quoteChar":  "\""
+                                          },
+                       "schema":  [
+
+                                  ]
+                   },
+    "type":  "Microsoft.Synapse/workspaces/datasets"
+}
