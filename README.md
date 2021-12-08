@@ -53,7 +53,7 @@ FilePrefix  | All CSVs that begin with this text will be processed
 DirectoryPath  | directory path (i.e. foldername1/foldername2/) 
 
 ## Pre-reqs
-There is a script you can use to help check for these pre-reqs and install them called 00 - PreReqCheck.ps1. Navigate to [01 Create Resources](https://github.com/hfoley/DataSharePipeline/tree/main/01%20Create%20Resources) for more details on running the script.  
+There is a script you can use to help check for these pre-reqs and install them called 00 - PreReqCheck.ps1. Navigate to [DataShare Full Sample](https://github.com/hfoley/DataSharePipeline/tree/main/DataShare%20Full%20Sample) for more details on running the script.  
 
 1. Open that file in your preferred PowerShell IDE (administrator mode is required to install anything). 
 2. PowerShell 5.1 or above needs installed locally.  You can check this by running the following script. 
