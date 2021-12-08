@@ -11,15 +11,13 @@ paramfile03.json | **Only file to update** Parameter file that all PowerShell sc
 02 - GrantRightsDataShareCLI.ps1 | Will grant rights to MSI and setup get secret permissions for Azure Key Vault using Azure CLI
 02 - GrantRightsDataShare.ps1 | Will grant rights to MSI and setup get secret permissions for Azure Key Vault using local machine PowerShell
 03 - Create Pipeline Parts DataShare.ps1 | Will create the pipelines and related items in Synapse workspace
-AKVLS.json | Json file for creation of the linked server pointing to ADLS Gen 2 (azstorage2 in paramfile01.json)
-LinkedServiceAzureSQLDB.json | Json file tied to the creation of the linked server pointing to Azure SQL DB 
-CustomerStorageLS.json | Json file tied to creation of dataset to pull metadata for tables to extract
+DataLakeLS | Json file for creation of the linked server pointing to ADLS Gen 2 (azstorage2 in paramfile01.json)
+AKVLS.json | Json file tied to the creation of the linked server pointing to Azure Key Vault
+CustomerStorageLS.json | Json file tied to creation of dynamic linked server to connect to storage accounts with details in AKV
 DataLakeLS.json | Json file tied to creation of dataset to pull metadata for tables to load
-DataLakeSinkDS.json | Json file tied to creation of dataset to land parquet files
-DynamicStorageSrcDS.json | Json file tied to creation of dataset to the custom logging table in Azure SQL DB
-DynamicDataPullPL.json | Json file tied to creation of dataset to dedicated sql pool tables
-paramfile03.json | Json file tied to creation of dataset to point to ADLS parquet files to load
-
+DynamicStorageSrcDS | Json file tied to creation of dataset to point to CSV location in storage account
+DataLakeSinkDS.json | Json file tied to creation of dataset to land the parquet files built from source CSV data
+DynamicDataPullPL | Json file tied to creation of pipeline with copy task to pull data from CSVs in Azure storage and land in parquet in data lake
 
 ## Azure Asset List - These items will be created in your Azure subscription
 1. Azure Resource Group
