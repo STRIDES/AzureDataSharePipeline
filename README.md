@@ -43,7 +43,7 @@ Azure Key Vault | akvname | Azure Key Vault to store connection string info in s
 	* Build the Synapse pipeline components:
 		* `./"03 - Create Pipeline Parts DataShare.ps1" -filepath ./paramfile03.json`
 	
-5. Run the pipeline with appropriate parameter values.  
+5. Run the pipeline with appropriate parameter values.  You will also want to update the Synapse workspace firewall from Azure CLI to your current client IP.  DisClient firewall rule is setup during automation to allow Azure CLI client to access Synapse for creation of components.  
 
 Parameter Name | Value details
 | :--- | :---
