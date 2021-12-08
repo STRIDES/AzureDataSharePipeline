@@ -40,7 +40,11 @@ DynamicDataPullPL | Json file tied to creation of pipeline with copy task to pul
 5. Run the 03 - CreateSynLoadPipelineParts.ps1 script.  You'll again be prompted for login to Azure.  This script will create the items within the Synapse workspace to build the pipelines.  It will create linked services, datasets, and pipelines.  Below is a sample syntax.  
   Azure CLI:  `./"03 - Create Pipeline Parts DataShare.ps1" -filepath ./paramfile03.json`<br>
   Locally:  `& "C:\folder\03 - Create Pipeline Parts DataShare.ps1" -filepath "C:\folder\paramfile03.json"`
-6. Navigate to the Synapse workspace and open up Synapse Studio.  Navigate to the integrate pane (far left pipe icon).  You can now run the DataShare pipeline.  You will be prompted again for the filename that will match to our [ADF].[MetadataLoad] for where it will load the data in the dedicated SQL pool.  This pattern will truncate and reload the destination table.  Verify it loads successfully (can use script DemoWatchSynapseLoadTables.sql). 
-14.  You can also now run the Incremental Load pipeline.  This will use a staging table to load what's contained in the parquet file.  It will then trunate the staging table, check for values in the final target table that match, delete them, and reload from the staging table.  
-15.  Validate you have values within your [COW].[Biometrics_Stg] and [COW].[Biometrics] tables.  You can add another entry into the [ADF].[MetadataLoad] for the other extracted parquet file and re-run the pipeline passing that filename into the parameter.  
-16. If running the SQL Not Date Based Extract, validate the logging is captured in ADF.PipelineLog table. Note: not all fields populate (update later to come to resolve)
+6. Navigate to the Synapse workspace and open up Synapse Studio.  Navigate to the integrate pane (far left pipe icon).  You can now run the DataShare pipeline.  It will be named what you supplied in the PipelineName1 variable in the paramfile03.json file.  You'll need to supply parameter values when running the pipeline detailed below.  
+7. Verify that the parquet files land in the ADLS Gen 2 location (azstoragename2) within containername2 variables from paramfile03.json.  
+Parameter Name | Value details
+| :--- | :---
+ParamSecret   | Name of the secret containing connection string 
+Container  | Name of container holding CSV files
+FilePrefix  | All CSVs that begin with this text will be processed 
+DirectoryPath  | directory path (i.e. foldername1/foldername2/) 
