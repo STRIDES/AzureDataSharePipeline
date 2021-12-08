@@ -26,8 +26,8 @@ Azure Data Lake Gen 2  | azstoragename | ADLS Gen 2 for system use of Synapse wo
 Azure Data Lake Gen 2  | azstoragename2 | ADLS Gen 2 to land processed parquet files 
 Azure Key Vault | akvname | Azure Key Vault to store connection string info in secret
 3 Synapse Linked Services| LinkedServiceNameX | Linked Services to use in the pipeline 
-Synapse datasets| DatasetNameX | Synapse Datasets to use in the pipeline
-Synapse pipeline | PipelineName1 | Synapse parameter driven pipeline
+2 Synapse datasets| DatasetNameX | Synapse Datasets to use in the pipeline
+1 Synapse pipeline | PipelineName1 | Synapse parameter driven pipeline
 
 
 ## What Needs to Be Done - High Level Overview of Steps  
